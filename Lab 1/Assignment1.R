@@ -5,7 +5,8 @@ str(data)
 
 n <- nrow(data)
 
-## Task 1
+
+### Task 1 ###
 # Split 50/25/25
 set.seed(12345)
 id <- sample(1:n, floor(n*0.5))
@@ -19,7 +20,8 @@ valid <- data[id2, ]
 id3 <- setdiff(id1, id2)
 test <- data[id3, ]
 
-## Task 2
+
+### Task 2 ###
 # Identify label (last col)
 names(train)[ncol(train)] <- "label"
 names(valid)[ncol(valid)] <- "label"
@@ -57,7 +59,8 @@ Test accuracy about 94.1% and train accuracy about 95.8%.
 The digits that are most often confused are 4-7, 5-9.
 "
 
-## Task 3
+
+### Task 3 ###
 probs_train <- m1$prob
 
 # Find the 8:s
@@ -100,7 +103,8 @@ plot_digit(train8[hard_idx[3], ], main = sprintf("Hardest 8 (3)", conf8[hard_idx
 All 3 are hard to recognize visualy.
 "
 
-## Task 4
+
+### Task 4 ###
 k_values <- 1:30
 train_err <- numeric(length(k_values))
 valid_err <- numeric(length(k_values))
@@ -156,7 +160,8 @@ indicating that the model generalizes well to unseen data.
 The small gap between training and validation errors suggests only mild overfitting.
 "
 
-## Task 5
+
+### Task 5 ###
 cross_ent <- numeric(length(k_values))
 
 for(i in seq_along(k_values)){
@@ -192,10 +197,3 @@ Unlike misclassification error, it also accounts for prediction confidence
 and penalizes overconfident mistakes, making it a more appropriate measure 
 for probabilistic classifiers.
 "
-
-
-
-
-
-
-

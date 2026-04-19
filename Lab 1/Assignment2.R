@@ -1,8 +1,6 @@
-# Assignment 2. Linear regression and ridge regression.
 library(caret)
 
-# ----1.----
-
+### Task 1 ###
 data = read.csv("parkinsons.csv")
 
 # Split data training/test data 60/40
@@ -23,7 +21,8 @@ X_train <- train_scaled[, -(1:6)] # drop columns 1-6
 y_test <- test_scaled[, 5]
 X_test <- test_scaled[, -(1:6)]
 
-# ----2.----
+
+### Task 2 ###
 
 # Define the MSE (difference between actual and predicted output)
 mse <- function(y, y_hat)
@@ -63,7 +62,8 @@ print(paste(
 ))
 print(paste("MSE on the test data:", mse(test_scaled$motor_UPDRS, test_pred)))
 
-# ----3.----
+
+### Task 3 ###
 
 # Log likelihood
 # Using the Gaussian linear model without intercept
@@ -132,7 +132,8 @@ df = function(lambda) {
   return(sum(diag(P)))
 }
 
-# ----4---
+
+### Task 4 ###
 # Task: Compute optimal theta parameters for lambda=1,100,1000.
 for (lambda in c(1,100,1000))
 {

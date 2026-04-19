@@ -1,5 +1,4 @@
-#1
-
+### Task 1 ###
 #Install packages & Use libraries
 install.packages("ggplot2")
 install.packages('RcolorBrewer')
@@ -44,9 +43,7 @@ plot(x = age, y = plasma_glucose, xlab = "Age",
 # plasma levels and ages so it's still hard to classify.
 
 
-
-#2
-
+### Task 2 ###
 #Use libraries
 library(tidyr)
 library(dplyr)
@@ -124,9 +121,7 @@ plot(x = age, y = plasma_glucose, xlab =
 # is some overlap for medium PlasmaGlucose levels.
 
 
-
-#3
-
+### Task 3 ###
 #Coefficients:
 coefficients <- coef(m1)
 
@@ -177,9 +172,7 @@ beta2
 # sketchy.
 
 
-
-#4
-
+### Task 4 ###
 #0.2 case:
 #Create pred with r = 0.2
 Pred=ifelse(Prob>0.2, "Diabetes", "No diabetes")
@@ -230,9 +223,7 @@ plot(x = age, y = plasma_glucose, xlab =
 # the first 20% will have diabetes, etc.
 
 
-
-#5
-
+### Task 5 ###
 x1 <- train$PlasmaGlucose
 x2 <- train$Age
 y <- train$Diabetes
@@ -320,4 +311,3 @@ plot(x = age, y = plasma_glucose, xlab =
 # The misclassification rate has gone down about 1.8% (0.18),
 # so it classifies about 75.5% correct now, as opposed to
 # 73.7% before.
-

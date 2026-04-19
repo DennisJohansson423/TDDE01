@@ -1,7 +1,4 @@
-#Lab3 Assignment 3. Support Vector Machines
-
-#-----Task 1-----
-
+#### Task 1 ###
 #Question:
 #Which filter do you return to the user?
 #filter0, filter1, filter2 or filter3? Why?
@@ -14,8 +11,7 @@
 #test set (te).
 
 
-#-----Task 2-----
-
+#### Task 2 ###
 #Question:
 #What is the estimate of the generalization
 #error of the filter returned to the user?
@@ -42,8 +38,7 @@
 #tested on data it was trained on. False performance.
 
 
-#-----Task 3-----
-
+#### Task 3 ###
 library(kernlab)
 set.seed(1234567890)
 

@@ -1,6 +1,7 @@
 library(neuralnet)
 
-### Task 1
+
+### Task 1 ###
 set.seed(1234567890)
 
 # Generate random x-values
@@ -42,8 +43,7 @@ given the limited training data and random weight initialisation.
 "
 
 
-### Task 2
-
+### Task 2 ###
 # Linear
 act_linear <- function(x) x
 
@@ -93,8 +93,7 @@ nonlinear activations (logistic/softplus) work best for this problem.
 "
 
 
-### Task 3
-
+### Task 3 ###
 # Generate new random x-values
 set.seed(1234567890)
 Var_big <- runif(500, 0, 50)
@@ -144,8 +143,7 @@ this interval and therefore gives poor predictions for x > 10.
 "
 
 
-### Task 4
-
+### Task 4 ###
 nn$weights
 
 "
@@ -166,8 +164,7 @@ they stop oscillating and instead converge to a nearly constant value.
 "
 
 
-### Task 5
-
+### Task 5 ###
 # Generate random x-values
 set.seed(1234567890)
 Var2 <- runif(500, 0, 10)

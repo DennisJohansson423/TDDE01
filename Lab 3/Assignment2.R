@@ -1,5 +1,4 @@
 set.seed(1234567890)
-
 library(geosphere)
 
 stations <- read.csv("stations.csv", fileEncoding = "latin1")

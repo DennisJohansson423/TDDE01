@@ -1,6 +1,6 @@
-# TDDE01
-Artificial intelligence 
-[Course Website]([https://www.ida.liu.se/~TDDD37/index.en.shtml](https://www.ida.liu.se/~TDDE01/))
+# TDDE01 - Machine Learning
+
+The [Course Website](https://www.ida.liu.se/~TDDE01/)
 
 ## What I Learned in This Course
 - Core machine learning methods: regression, classification, neural networks, kernel models

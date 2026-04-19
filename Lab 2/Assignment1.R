@@ -1,13 +1,9 @@
-#Lab 2 Assignment 1: Explicit Regularization
-
-
 #Install necessary packages:
 install.packages("dplyr")
 install.packages("glmnet")
 
 
-#-----Task 1-----
-
+### Task 1 ###
 #First we make a dataframe
 df_tecator = read.csv("tecator.csv")
 
@@ -87,8 +83,8 @@ MSE_test # = 722.4294 ≈ 7220.43% <- very bad!
 #So the model has high variance which leads to
 #high levels of overfitting.
 
-#-----Task 2-----
 
+### Task 2 ###
 #The cost function to be optimized (minimized) for the LASSO
 #regression with Fat = Y and Channels = X_j is:
 
@@ -114,8 +110,7 @@ MSE_test # = 722.4294 ≈ 7220.43% <- very bad!
 # the strength of the penalty.
 
 
-#-----Task 3-----
-
+### Task 3 ###
 #Select Fat & all Channels into a new dataframe
 df_2 = train%>%select(Fat, Channel1:Channel100)
 
@@ -191,8 +186,7 @@ plot(mB_lasso, xvar = "lambda", label = TRUE)
 #3 features.
 
 
-#-----Task 4-----
-
+### Task 4 ###
 #Same as in Task 3 but using Ridge regression
 #instead of Lasso, which is done by changing
 #alpha from 1 to 0, so alpha=0 in the glmnet() function.
@@ -235,8 +229,7 @@ plot(mB_ridge, xvar = "lambda", label = TRUE)
 # better to new data than the lasso model in the beginning.
 
 
-#-----Task 5-----
-
+### Task 5 ###
 #Select Fat & all Channels into a new dataframe
 df_3 = train%>%select(Fat, Channel1:Channel100)
 

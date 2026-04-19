@@ -1,7 +1,6 @@
 library(tree)
 
-### Task 1
-
+### Task 1 ###
 # Load data
 bank <- read.csv2("bank-full.csv")
 bank$duration <- NULL
@@ -22,8 +21,7 @@ valid <- bank[id2,]
 id3 <- setdiff(id1,id2)
 test <- bank[id3,]
 
-### Task 2
-
+### Task 2 ###
 ## a)
 
 # Default decision tree
@@ -100,8 +98,8 @@ producing a much larger tree that fits the training data better but
 does not generalise better to the validation set.
 "
 
-### Task 3
 
+### Task 3 ###
 # Define number of leaves
 sizes <- 2:50
 train_dev <- numeric(length(sizes))
@@ -161,8 +159,8 @@ probabilities than recently contacted clients with low balances and a
 housing loan.
 "
 
-### Task 4
 
+### Task 4 ###
 # Predict test using opt_tree
 pred_test <- predict(opt_tree, newdata = test, type = "class")
 
@@ -202,8 +200,8 @@ appropriate, since it focuses on the minority “yes” class
 and combines both precision and recall.
 "
 
-### Task 5
 
+### Task 5 ###
 # Define the loss matrix
 lvl <- levels(train$y)
 
@@ -238,8 +236,8 @@ the actual subscribers when we take both precision and recall
 into account.
 "
 
-### Task 6
 
+### Task 6 ###
 # Logistic regression on training
 logistic_model <- glm(y~., data = train, family = binomial)
 
@@ -334,4 +332,3 @@ on the minority class. For this kind of imbalanced data, a
 precision–recall curve usually gives a more informative picture
 than the ROC curve.
 "
-

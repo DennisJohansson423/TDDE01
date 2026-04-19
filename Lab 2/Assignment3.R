@@ -1,6 +1,3 @@
-#########################################
-# Assignment 3. Principal components and implicit regularization
-#########################################
 # communities.csv contains results of crime level based on various characteristics of the given location.
 # We are mainly looking at violent crimes per 100k.
 
@@ -10,9 +7,7 @@ library(dplyr)
 library(ggplot2)
 library(ggfortify)
 
-#########################################
-# Task 1
-#########################################
+### Task 1 ###
 # Scale all variables except of ViolentCrimesPerPop and implement PCA by using
 # eigen(). Report how many components are needed to obtain at least 95% of
 # variance in the data. What is the proportion of variation explained by each
@@ -36,16 +31,8 @@ which(cs >= 95)[1] # 35 components
 # Proportion of variation by the two first principal components
 sum(eig$values[1:2]) #41.97854
 
-############### Task 2 #################
-# Repeat PCA analysis by using princomp() function and make the trace plot of
-# the first principle component. Do many features have a notable contribution
-# to this component? report which 5 features contribute mostly (by the absolute
-# value) to the first principle component. Comment whether these features have
-# anything in common and whether they may have a logical relationship to the
-# crime level. Also provide a plot of the PC scores in the coordinates (PC1,
-# PC2) in which the color of the points is given by ViolentCrimesPerPop.
-############### Task 2 #################
 
+### Task 2 ###
 # Implement PCA using princomp
 res2 <- princomp(data2)
 
@@ -85,14 +72,8 @@ autoplot(res2, colour = "ViolentCrimesPerPop") +
 # 35 PC's explain 95% of the variance? Means that the data has significant high-dimensional structure
 # PC1-PC2 plot shows a correlation and the position along PC1.
 
-############### Task 3 #################
-# Split the original data into training and test (50/50) and scale both
-# features and response appropriately, and estimate a linear regression model
-# from training data in which ViolentCrimesPerPop is target and all other
-# data columns are features. Compute training and test errors for these data
-# and comment on the quality of model.
-############### Task 3 #################
 
+### Task 3 ###
 # Split data into train and test
 n = dim(data)[1]
 set.seed(12345)
@@ -138,11 +119,8 @@ MSE(y_test, y_hat_test)
 # Notes:
 # Lower MSE means better predictive performance.
 
-############### Task 4 #################
-# Implements a cost function for linear regression.
-# Uses BFGS for optimization.
-############### Task 4 #################
 
+### Task 4 ###
 # Vectors to store training and test errors at each function evaluation
 train_errors <- c()
 test_errors <- c()
